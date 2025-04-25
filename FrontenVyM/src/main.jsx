@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { App } from "./AppGTC";
+import { AppGTC } from "./AppGTC";
 import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <AppGTC title />
   </React.StrictMode>
 );

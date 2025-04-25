@@ -5,4 +5,3 @@ const router = express.Router();
 router.post("/", loginUser);
 router.post("/logout", logoutUser);
 module.exports = router;
- 
