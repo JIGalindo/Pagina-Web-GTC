@@ -1,0 +1,37 @@
+html,body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    background-color:#FFFAFA;
+}
+.subMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.botonContac{
+    background-color: #1A2D7A;
+    color: white;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+
+}
+.logo {
+    width: 10rem; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Mantiene la proporción del logo */
+  }
+.verificar{
+    font-size: .8rem;
+    color: gray;
+  }
