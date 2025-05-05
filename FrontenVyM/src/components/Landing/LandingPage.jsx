@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import "./stylesLanding.css";
 import { Head } from "./Head/Head";
 import { Course } from "./course/Course";
 import { Introduction } from "./Introduction/Introduction";
