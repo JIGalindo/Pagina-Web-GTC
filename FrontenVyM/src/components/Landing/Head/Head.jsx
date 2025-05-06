@@ -6,7 +6,7 @@ export const Head = () => {
     <>
       <nav
         className="flex justify-between items-center bg-[#ffffff] h-12 px-10
-      fixed w-full top-0 left-0 "
+       w-full top-0 left-0 "
       >
         <img src="./Logo.png" alt="Logo" className="w-32" />
 

@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import "./styles.css";
 
 export const AppGTC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { AppGTC } from "./AppGTC";
+//import { AppGTC } from "./AppGTC";
 import "./styles.css";
 import { LandingPage } from "./components/Landing/LandingPage";
 

@@ -4,11 +4,12 @@ import { Head } from "./Head/Head";
 import { Course } from "./course/Course";
 import { Introduction } from "./Introduction/Introduction";
 import { Why } from "./Why/Why";
+import { Navbar } from "./navbar/navbar";
 
 export const LandingPage = () => {
   return (
     <>
-      <Head />
+      <Navbar />
       <Introduction />
       <Why />
       <Course />
