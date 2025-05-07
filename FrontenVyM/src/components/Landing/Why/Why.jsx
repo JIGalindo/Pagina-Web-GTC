@@ -7,13 +7,15 @@ export const Why = () => {
       <div
         className="flex flex-col justify-center items-center 
        h-auto w-full
-       text-black mb-2 p-10 mt-2 mr-2 ml-2 rounded-lg"
+       text-black mb-2 p-10 mt-2  rounded-lg"
       >
         <h1 className="font-bold text-4xl pb-10">¿Por Qué Elegirnos?</h1>
-        <div className="flex ">
+        <div className="flex items-self justify-around">
           <div
-            className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md m-2 flex flex-col items-center justify-center 
-          hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md 
+            flex flex-col items-center justify-around
+          hover:scale-105 transition-transform duration-300 ease-in-out
+          self-stretch w-[20%]"
           >
             <h4 className="font-bold m-2">Experiencia Comprobada</h4>
             <p className="text-base m-2">
@@ -25,7 +27,7 @@ export const Why = () => {
               width="512"
               height="512"
               viewBox="0 0 512 512"
-              className="size-24 "
+              className="size-20"
             >
               <path
                 fill="#ffb636"
@@ -38,8 +40,11 @@ export const Why = () => {
             </svg>
           </div>
           <div
-            className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md m-2 flex flex-col items-center justify-center 
-          hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md
+            flex flex-col items-center justify-around
+          hover:scale-105 transition-transform duration-300 ease-in-out
+          self-stretch w-[20%]
+          "
           >
             <h4 className="font-bold m-2">Cumplimiento Normativo</h4>
             <p className="text-base m-2">
@@ -51,7 +56,7 @@ export const Why = () => {
               width="1200"
               height="1200"
               viewBox="0 0 1200 1200"
-              className="size-24 "
+              className="size-20 "
             >
               <path
                 fill="#ffb636"
@@ -60,8 +65,10 @@ export const Why = () => {
             </svg>
           </div>
           <div
-            className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md m-2 flex flex-col items-center justify-center
-          hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md
+            flex flex-col items-center justify-around
+          hover:scale-105 transition-transform duration-300 ease-in-out
+          self-stretch w-[20%]"
           >
             <h4 className="font-bold m-2">Entrenamiento Realista</h4>
             <p className="text-base m-2">
@@ -82,8 +89,10 @@ export const Why = () => {
             </svg>
           </div>
           <div
-            className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md m-2 flex flex-col items-center justify-center 
-          hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md
+            flex flex-col items-center justify-around 
+          hover:scale-105 transition-transform duration-300 ease-in-out
+          self-stretch w-[20%]"
           >
             <h4 className="font-bold m-2">Reconocimiento Industrial</h4>
             <p className="text-base m-2">
@@ -95,7 +104,7 @@ export const Why = () => {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              className="size-24 "
+              className="size-22 "
             >
               <path
                 fill="#ffb636"

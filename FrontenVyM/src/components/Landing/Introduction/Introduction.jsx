@@ -5,29 +5,34 @@ export const Introduction = () => {
   return (
     <>
       <div
-        className="flex flex-row justify-center align-center items-center 
-       bg-gradient-to-b from-sky-[#0ea5e9] to-sky-500
-        text-white h-auto"
+        className="relative w-full h-auto  text-white "
         transition-style="in:custom:circle-swoop"
       >
+        {/* Video en el fondo */}
         <video
-          className="aspect-(--my-aspect-ratio) ... border-2 border-white rounded-lg
-          object-cover w-[400px] h-auto ml-4 mt-4 mb-4"
-          controls="true"
-          src="./capacitacion.mp4"
-          muted="true"
-          autoPlay="true"
-          loop="true"
-        ></video>
-        <div className="flex flex-col justify-center items-start ml-4">
-          <h1 className="text-4xl font-bold text-wrap ">
-            Capacitación Segura en Alturas y Espacios
-            <br />
-            Confinados
+          className="w-full h-[400px] object-cover "
+          style={{ aspectRatio: "16 / 9" }}
+          src="./gtc.mp4"
+          muted
+          autoPlay
+          loop
+        />
+
+        {/* Capa superpuesta con texto */}
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col  items-center px-4 rounded-lg">
+          <h1
+            className="text-3xl md:text-4xl font-bold text-center
+            text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-yellow-400 to-sky-700
+          drop-shadow-lg"
+          >
+            Capacitación Segura en Alturas y Espacios Confinados
           </h1>
-          <h5 className="text-lg font-normal text-wrap">
-            Expertos en capacitación de seguridad laboral en alturas y espacios
-            confinados. Certificación garantizada.
+          <h5
+            className="text-lg md:text-xl font-normaltext-center 
+          text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-yellow-400 to-sky-700
+          drop-shadow text"
+          >
+            Expertos en seguridad laboral con certificación garantizada.
           </h5>
         </div>
       </div>
