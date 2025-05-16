@@ -5,6 +5,9 @@ import { Course } from "./course/Course";
 import { Introduction } from "./Introduction/Introduction";
 import { Why } from "./Why/Why";
 import { Navbar } from "./navbar/navbar";
+import { Footer } from "./Footer/Footer";
+import { Certification } from "./Certification/Certification";
+import { OurTeam } from "./ourTeam/ourTeam";
 
 export const LandingPage = () => {
   return (
@@ -13,6 +16,9 @@ export const LandingPage = () => {
       <Introduction />
       <Why />
       <Course />
+      <Certification />
+      <OurTeam />
+      <Footer />
     </>
   );
 };

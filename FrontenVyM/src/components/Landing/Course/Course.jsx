@@ -8,7 +8,7 @@ export const Course = () => {
         className="flex flex-col items-center justify-center w-full h-auto 
       bg-[url(./entrenamiento.png)] ...
       opacity-70 
-       text-black mb-2 mt-2  
+       text-black mt-2  
       bg-cover "
       >
         <h1 className="font-bold text-4xl pb-10">Nuestros Cursos</h1>
