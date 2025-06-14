@@ -28,7 +28,7 @@ export const Introduction = () => {
             Capacitación Segura en Alturas y Espacios Confinados
           </h1>
           <h5
-            className="text-lg md:text-xl font-normaltext-center 
+            className="text-lg md:text-xl font-normal text-center 
           text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-yellow-400 to-sky-700
           drop-shadow text"
           >

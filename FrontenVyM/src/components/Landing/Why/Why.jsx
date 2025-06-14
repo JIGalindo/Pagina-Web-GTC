@@ -10,7 +10,7 @@ export const Why = () => {
        text-black mb-2 p-10 mt-2  rounded-lg"
       >
         <h1 className="font-bold text-4xl pb-10">¿Por Qué Elegirnos?</h1>
-        <div className="flex items-self justify-around">
+        <div className="grid grid-cols-4">
           <div
             className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md 
             flex flex-col items-center justify-around
