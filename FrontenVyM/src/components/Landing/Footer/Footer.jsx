@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <>
       <footer className="flex justify-between bg-gradient-to-br from-[#014470] to-[#007ad9] text-white">
-        <p className="font-bold text-center text-xs p-4">
+        <p className="font-bold text-center p-4 text-[0.3rem] lg:text-xs">
           © 2025 V&M de Honduras, todos los derechos reservados.
         </p>
 

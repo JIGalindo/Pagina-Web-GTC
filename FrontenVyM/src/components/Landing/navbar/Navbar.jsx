@@ -4,9 +4,9 @@ export const Navbar = () => {
   return (
     <>
       <nav className="bg-gray-800">
-        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-2  lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
-            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
               <button
                 type="button"
                 className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
@@ -57,7 +57,7 @@ export const Navbar = () => {
                   alt="Your Company"
                 />
               </div>
-              <div className="hidden sm:ml-6 sm:block">
+              <div className="hidden sm:ml-6 md:block">
                 <div className="flex space-x-4">
                   <a
                     href="#"
@@ -67,13 +67,13 @@ export const Navbar = () => {
                     Inicio
                   </a>
                   <a
-                    href="#"
+                    href="#Team"
                     className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
                     Equipo
                   </a>
                   <a
-                    href="#"
+                    href="#Course"
                     className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
                     Capacitaciones
@@ -86,7 +86,7 @@ export const Navbar = () => {
                     Certificados
                   </a>
                   <a
-                    href="#"
+                    href="#Contact"
                     className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
                     Contactanos
@@ -97,7 +97,7 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <div className="sm:hidden" id="mobile-menu">
+        <div className="md:hidden" id="mobile-menu">
           <div className="space-y-1 px-2 pt-2 pb-3">
             <a
               href="#"
@@ -107,13 +107,13 @@ export const Navbar = () => {
               Inicio
             </a>
             <a
-              href="#"
+              href="#Team"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Equipo
             </a>
             <a
-              href="#"
+              href="#Course"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Capacitaciones
@@ -126,7 +126,7 @@ export const Navbar = () => {
               Certificados
             </a>
             <a
-              href="#"
+              href="#Contact"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Contactanos

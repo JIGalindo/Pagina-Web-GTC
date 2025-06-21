@@ -5,7 +5,7 @@ export const Certification = () => {
     <>
       <div className="mb-2">
         <div className="mb-2">
-          <h1 className="text-center text-4xl font-bold mt-10">
+          <h1 className="text-center text-2xl font-bold mt-10 lg:text-4xl">
             Certificación
           </h1>
         </div>
@@ -17,10 +17,10 @@ export const Certification = () => {
               <div className="absolute bottom-[-20px] w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-t-[20px] border-t-blue-200"></div>
             </div>
             <div className="bg-white p-4 flex-1">
-              <h3 className="text-lg font-bold">
+              <h3 className="text-[20px] lg:text-xl font-bold">
                 Certificado Digital e Impreso
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[18px] lg:text-lg text-gray-600">
                 Recibe tu certificado al finalizar el curso.
               </p>
             </div>
@@ -32,8 +32,10 @@ export const Certification = () => {
               <div className="absolute bottom-[-20px] w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-t-[20px] border-t-blue-200"></div>
             </div>
             <div className="bg-white p-4 flex-1">
-              <h3 className="text-lg font-bold">Validez de 1 Año</h3>
-              <p className="text-gray-600">
+              <h3 className="text-[20px] lg:text-xl font-bold">
+                Validez de 1 Año
+              </h3>
+              <p className="text-[18px] lg:text-lg text-gray-600">
                 Actualización continua recomendada.
               </p>
             </div>
@@ -45,8 +47,10 @@ export const Certification = () => {
               <div className="absolute bottom-[-20px] w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-t-[20px] border-t-blue-200"></div>
             </div>
             <div className="bg-white p-4 flex-1">
-              <h3 className="text-lg font-bold">Estándares Internacionales</h3>
-              <p className="text-gray-600">
+              <h3 className="text-[20px] lg:text-xl font-bold">
+                Estándares Internacionales
+              </h3>
+              <p className="text-[18px] lg:text-lg text-gray-600">
                 Cumplimiento con OSHA 29 CFR 1926 Subparte M.
               </p>
             </div>
@@ -58,8 +62,10 @@ export const Certification = () => {
               <div className="absolute bottom-[-20px] w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-t-[20px] border-t-blue-200"></div>
             </div>
             <div className="bg-white p-4 flex-1">
-              <h3 className="text-lg font-bold">Plataforma Online</h3>
-              <p className="text-gray-600">
+              <h3 className="text-[20px] lg:text-xl font-bold">
+                Plataforma Online
+              </h3>
+              <p className="text-[18px] lg:text-lg text-gray-600">
                 Acceso a materiales de apoyo y recursos.
               </p>
             </div>

@@ -7,6 +7,7 @@ import { Navbar } from "./navbar/navbar";
 import { Footer } from "./Footer/Footer";
 import { Certification } from "./Certification/Certification";
 import { OurTeam } from "./ourTeam/ourTeam";
+import { Contact } from "./Contact/Contact";
 
 export const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ export const LandingPage = () => {
       <Course />
       <Certification />
       <OurTeam />
+      <Contact />
       <Footer />
     </>
   );

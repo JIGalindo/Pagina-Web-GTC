@@ -21,14 +21,14 @@ export const Introduction = () => {
         {/* Capa superpuesta con texto */}
         <div className="absolute top-0 left-0 w-full h-full flex flex-col  items-center px-4 rounded-lg">
           <h1
-            className="text-3xl md:text-4xl font-bold text-center
+            className="text-[20px] lg:text-4xl font-bold text-center
             text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-yellow-400 to-sky-700
           drop-shadow-lg"
           >
             Capacitación Segura en Alturas y Espacios Confinados
           </h1>
           <h5
-            className="text-lg md:text-xl font-normal text-center 
+            className="text-[15px] lg:text-2xl font-normal text-center 
           text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-yellow-400 to-sky-700
           drop-shadow text"
           >

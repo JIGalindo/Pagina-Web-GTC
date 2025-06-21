@@ -5,48 +5,55 @@ export const Course = () => {
   return (
     <>
       <div
+        id="Course"
         className="flex flex-col items-center justify-center w-full h-auto 
       bg-[url(./entrenamiento.png)] ...
       opacity-70 
        text-black mt-2  
       bg-cover "
       >
-        <h1 className="font-bold text-4xl pb-10">Nuestros Cursos</h1>
-        <div className="flex items-center justify-around">
+        <h1 className="font-bold text-[25px] lg:text-4xl p-4">
+          Nuestros Cursos
+        </h1>
+        <div className="flex flex-col justify-around lg:flex-row p-4 gap-4 w-full h-auto">
           <div
             className=" rounded-md 
-            flex flex-col items-start justify-start
+            flex flex-col items-center justify-center
           hover:scale-105 transition-transform duration-300 ease-in-out
-          self-stretch w-[30%]"
+          self-stretch w-auto lg:w-[30%]"
           >
-            <h4 className="font-bold">Trabajo en Alturas (8 horas)</h4>
-            <p className="text-base">
+            <h4 className="font-bold text-[18px] lg:text-xl">
+              Trabajo en Alturas (8 horas)
+            </h4>
+            <p className="text-[15px] lg:text-base">
               Normativa, EPP, sistemas de anclaje, técnicas de ascenso/descenso,
               rescate en alturas.
             </p>
           </div>
           <div
             className=" rounded-md 
-            flex flex-col items-start justify-start
+            flex flex-col items-center justify-center
           hover:scale-105 transition-transform duration-300 ease-in-out
-          self-stretch w-[30%]"
+          self-stretch w-auto lg:w-[30%]"
           >
-            <h4 className="font-bold">
+            <h4 className="font-bold text-[18px] lg:text-xl">
               Trabajo en Espacios Confinados (8 horas)
             </h4>
-            <p className="text-base">
+            <p className="text-[15px] lg:text-base">
               Identificación de riesgos, procedimientos de entrada/salida,
               monitoreo, protección respiratoria, rescate.
             </p>
           </div>
           <div
             className=" rounded-md 
-            flex flex-col items-start justify-start
+            flex flex-col items-center justify-center
           hover:scale-105 transition-transform duration-300 ease-in-out
-          self-stretch w-[30%]"
+          self-stretch w-auto lg:w-[30%]"
           >
-            <h4 className="font-bold">Actualización (8 horas)</h4>
-            <p className="text-base">
+            <h4 className="font-bold text-[18px] lg:text-xl">
+              Actualización (8 horas)
+            </h4>
+            <p className="text-[15px] lg:text-base">
               Repaso normativo, nuevas tecnologías, análisis de casos de
               estudio.
             </p>

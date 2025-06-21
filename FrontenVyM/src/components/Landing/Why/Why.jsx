@@ -9,16 +9,23 @@ export const Why = () => {
        h-auto w-full
        text-black mb-2 p-10 mt-2  rounded-lg"
       >
-        <h1 className="font-bold text-4xl pb-10">¿Por Qué Elegirnos?</h1>
-        <div className="grid grid-cols-4">
+        <h1 className="font-bold text-[25px] p-4 lg:text-4xl">
+          ¿Por Qué Elegirnos?
+        </h1>
+        <div
+          className="flex flex-col lg:flex-row justify-around items-center
+        w-full h-auto gap-4"
+        >
           <div
             className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md 
             flex flex-col items-center justify-around
           hover:scale-105 transition-transform duration-300 ease-in-out
-          self-stretch w-[20%]"
+          self-stretch w-auto lg:w-[20%] mb-4 lg:mb-0"
           >
-            <h4 className="font-bold m-2">Experiencia Comprobada</h4>
-            <p className="text-base m-2">
+            <h4 className="font-bold m-2 text-[20px] lg:text-2xl">
+              Experiencia Comprobada
+            </h4>
+            <p className="text-[15px] lg:text-base m-2">
               Instructores certificados con más de 10 años de experiencia
               práctica en el campo.
             </p>
@@ -27,7 +34,7 @@ export const Why = () => {
               width="512"
               height="512"
               viewBox="0 0 512 512"
-              className="size-20"
+              className="size-10 lg:size-20"
             >
               <path
                 fill="#ffb636"
@@ -43,11 +50,13 @@ export const Why = () => {
             className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md
             flex flex-col items-center justify-around
           hover:scale-105 transition-transform duration-300 ease-in-out
-          self-stretch w-[20%]
+          self-stretch w-auto lg:w-[20%] mb-4 lg:mb-0
           "
           >
-            <h4 className="font-bold m-2">Cumplimiento Normativo</h4>
-            <p className="text-base m-2">
+            <h4 className="font-bold m-2 text-[20px] lg:text-2xl">
+              Cumplimiento Normativo
+            </h4>
+            <p className="text-[15px] lg:text-base m-2">
               Cursos diseñados según normativas internacionales (OSHA, ANSI,
               etc.) para garantizar la seguridad.
             </p>
@@ -56,7 +65,7 @@ export const Why = () => {
               width="1200"
               height="1200"
               viewBox="0 0 1200 1200"
-              className="size-20 "
+              className="size-10 lg:size-20"
             >
               <path
                 fill="#ffb636"
@@ -68,10 +77,12 @@ export const Why = () => {
             className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md
             flex flex-col items-center justify-around
           hover:scale-105 transition-transform duration-300 ease-in-out
-          self-stretch w-[20%]"
+          self-stretch w-auto lg:w-[20%] mb-4 lg:mb-0"
           >
-            <h4 className="font-bold m-2">Entrenamiento Realista</h4>
-            <p className="text-base m-2">
+            <h4 className="font-bold m-2 text-[20px] lg:text-2xl">
+              Entrenamiento Realista
+            </h4>
+            <p className="text-[15px] lg:text-base m-2">
               Simulacros realistas en entornos controlados, con un índice de
               satisfacción del 95%.
             </p>
@@ -80,7 +91,7 @@ export const Why = () => {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              className="size-24 "
+              className="size-10 lg:size-20"
             >
               <g fill="#ffb636">
                 <path d="M3 3h18v4.385h-2V5H5v9h4.333v2H3z" />
@@ -92,10 +103,12 @@ export const Why = () => {
             className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md
             flex flex-col items-center justify-around 
           hover:scale-105 transition-transform duration-300 ease-in-out
-          self-stretch w-[20%]"
+          self-stretch w-auto lg:w-[20%] mb-4 lg:mb-0"
           >
-            <h4 className="font-bold m-2">Reconocimiento Industrial</h4>
-            <p className="text-base m-2">
+            <h4 className="font-bold m-2 text-[20px] lg:text-2xl">
+              Reconocimiento Industrial
+            </h4>
+            <p className="text-[15px] lg:text-base m-2 ">
               Certificación válida y reconocida por la industria, avalando la
               calidad de nuestra formación.
             </p>
@@ -104,7 +117,7 @@ export const Why = () => {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              className="size-22 "
+              className="size-10 lg:size-20"
             >
               <path
                 fill="#ffb636"
