@@ -5,13 +5,18 @@ import { useState, useEffect } from "react";
 
 export function Certificate() {
   const [certificado, setCertificado] = useState(null);
+  console.log("Certificado:", certificado);
 
   useEffect(() => {
     axios
       .get("http://localhost:4000/certificado/10019")
-      .then((res) => setCertificado(res.data.mensaje))
+      .then((res) => setCertificado(res.data))
       .catch((err) => console.error("Error al llamar API:", err));
   }, []);
+  if (!certificado) {
+    return <p className="p-4 text-center">Cargando certificado...</p>;
+  }
+
   return (
     <>
       <div className="text-gray-900 bg-gray-200">
@@ -32,18 +37,30 @@ export function Certificate() {
                 <td className="">
                   <input
                     type="text"
-                    value={certificado.nombre}
+                    value={certificado.nombreCompleto}
                     className="bg-transparent"
                   />
                 </td>
                 <td className="">
-                  <input type="text" value="" className="bg-transparent" />
+                  <input
+                    type="text"
+                    value={certificado.empresa}
+                    className="bg-transparent"
+                  />
                 </td>
                 <td className="">
-                  <input type="text" value="" className="bg-transparent" />
+                  <input
+                    type="text"
+                    value={certificado.tipoCertificado}
+                    className="bg-transparent"
+                  />
                 </td>
                 <td className="">
-                  <input type="text" value="" className="bg-transparent" />
+                  <input
+                    type="text"
+                    value={certificado.fechaCertificacion.slice(0, 10)}
+                    className="bg-transparent"
+                  />
                 </td>
                 <td className="p-3 flex">
                   <button

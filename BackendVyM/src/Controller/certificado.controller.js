@@ -1,6 +1,21 @@
 const database = require("../Config/database");
 const mysql2 = require("mysql2");
 
+const allCertificado = (req, res) => {
+  const readQuery = `SELECT * FROM Certificado`;
+
+  const query = mysql2.format(readQuery);
+
+  database.query(query, (err, result) => {
+    if (err) throw err;
+    if (result.length > 0) {
+      res.json({ message: result });
+    } else {
+      res.json({ message: "No hay certificados" });
+    }
+  });
+};
+
 const readCertificadoId = (req, res) => {
   const { id } = req.params;
 
@@ -92,6 +107,7 @@ module.exports = {
   readCertificado,
   readCertificadoId,
   createCertificado,
+  allCertificado,
   /*
   updateUser,
   deleteUser,*/
