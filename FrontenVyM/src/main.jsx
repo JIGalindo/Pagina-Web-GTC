@@ -5,6 +5,7 @@ import "./styles.css";
 //import { LandingPage } from "./components/Landing/LandingPage";
 //import { Login } from "./components/Auth/Login";
 import { Certificate } from "./components/Certificate/Certificate";
+import { CPanel } from "./components/admin/Cpanel/CPanel";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

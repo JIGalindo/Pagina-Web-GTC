@@ -23,7 +23,7 @@ const loginUser = (req, res) => {
 
     if (results.length > 0) {
       const user = results[0];
- 
+
       // Comparar las contraseñas de manera segura usando bcrypt
       const validPassword = await bcrypt.compare(password, user.password);
 

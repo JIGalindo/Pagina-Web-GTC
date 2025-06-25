@@ -18,63 +18,46 @@ export function Certificate() {
   }
 
   return (
-    <>
-      <div className="text-gray-900 bg-gray-200">
-        <div className="p-4 flex">
-          <h1 className="text-3xl">Personas Certificadas</h1>
-        </div>
-        <div className="px-3 py-4 flex justify-center">
-          <table className="bg-white shadow-md rounded">
-            <tbody>
-              <tr className="border-b">
-                <th className="text-left p-3 ">Nombre</th>
-                <th className="text-left p-3">Empresa</th>
-                <th className="text-left p-3">Capacitacion</th>
-                <th className="text-left p-3">Fecha</th>
-                <th className="text-left p-3"></th>
-              </tr>
-              <tr className="border-b hover:bg-orange-100 bg-gray-100">
-                <td className="">
-                  <input
-                    type="text"
-                    value={certificado.nombreCompleto}
-                    className="bg-transparent"
-                  />
-                </td>
-                <td className="">
-                  <input
-                    type="text"
-                    value={certificado.empresa}
-                    className="bg-transparent"
-                  />
-                </td>
-                <td className="">
-                  <input
-                    type="text"
-                    value={certificado.tipoCertificado}
-                    className="bg-transparent"
-                  />
-                </td>
-                <td className="">
-                  <input
-                    type="text"
-                    value={certificado.fechaCertificacion.slice(0, 10)}
-                    className="bg-transparent"
-                  />
-                </td>
-                <td className="p-3 flex">
-                  <button
-                    type="button"
-                    className="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                  >
-                    Save
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600">
+      <div className="bg-white/95 rounded-2xl shadow-2xl p-10 w-full max-w-xl border-4 border-yellow-400 relative">
+        <img
+          src="/Logo.png"
+          alt="Logo"
+          className="absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 object-contain bg-white rounded-full border-4 border-yellow-400 shadow-lg"
+        />
+        <div className="flex flex-col items-center mt-16">
+          <h1 className="text-3xl font-extrabold text-blue-900 mb-2 text-center tracking-wide">
+            Certificado de Participación
+          </h1>
+          <hr className="border-yellow-400 w-1/2 mb-6" />
+          <p className="text-lg mb-2 text-blue-900 font-semibold">
+            {certificado.nombreCompleto}
+          </p>
+          <p className="text-base mb-1 text-gray-700">
+            <span className="font-semibold text-blue-900">Identidad:</span>{" "}
+            {certificado.identidad}
+          </p>
+          <p className="text-base mb-1 text-gray-700">
+            <span className="font-semibold text-blue-900">Empresa:</span>{" "}
+            {certificado.empresa}
+          </p>
+          <p className="text-base mb-1 text-gray-700">
+            <span className="font-semibold text-blue-900">Certificado:</span>{" "}
+            {certificado.tipoCertificado}
+          </p>
+          <p className="text-base mb-1 text-gray-700">
+            <span className="font-semibold text-blue-900">Instructor:</span>{" "}
+            {certificado.instructor}
+          </p>
+          <p className="text-base mb-1 text-gray-700">
+            <span className="font-semibold text-blue-900">Fecha:</span>{" "}
+            {certificado.fechaCertificacion.slice(0, 10)}
+          </p>
+          <p className="text-base mt-4 text-yellow-600 font-bold tracking-wider">
+            Codigo del Certificado: {certificado.id}
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
