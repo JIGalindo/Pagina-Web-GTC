@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Footer } from "../Footer/Footer";
+import { Why } from "../Why/Why";
 
 export const Course = () => {
   return (
@@ -60,6 +62,8 @@ export const Course = () => {
           </div>
         </div>
       </div>
+      <Why />
+      <Footer />
     </>
   );
 };

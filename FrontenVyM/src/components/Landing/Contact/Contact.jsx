@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../Footer/Footer";
 
 export const Contact = () => {
   return (
@@ -134,6 +135,7 @@ export const Contact = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -15,7 +15,7 @@ export const Why = () => {
         <div
           className="flex flex-col lg:flex-row justify-around items-center
         w-full h-auto gap-4"
-        >
+        > 
           <div
             className="bg-gradient-to-r from-sky-500 to-sky-700 rounded-md 
             flex flex-col items-center justify-around

@@ -1,5 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { Footer } from "../Footer/Footer";
+
 
 export const Introduction = () => {
   return (
@@ -36,8 +37,8 @@ export const Introduction = () => {
           </h5>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
 
-Introduction.propTypes = {};

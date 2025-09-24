@@ -7,5 +7,5 @@ import {AppGTC} from './AppGTC'
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <AppGTC/>
-  </BrowserRouter>
+  </BrowserRouter> 
 );

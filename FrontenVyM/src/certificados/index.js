@@ -1,1 +1,2 @@
-export * from './routes/CertificateRoutes'
+export * from './routes/CertificateRoutes';
+export * from './pages/TableroPage';

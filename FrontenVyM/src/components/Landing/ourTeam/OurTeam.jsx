@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../Footer/Footer";
 
 export const OurTeam = () => {
   return (
@@ -32,6 +33,7 @@ export const OurTeam = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../Footer/Footer";
 
 export const Certification = () => {
   return (
@@ -72,6 +73,7 @@ export const Certification = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
