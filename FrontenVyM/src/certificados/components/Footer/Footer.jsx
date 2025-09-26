@@ -3,7 +3,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <footer className="flex justify-between bg-gradient-to-br from-[#014470] to-[#007ad9] text-white">
+      <footer className="fixed bottom-0 left-0 w-full flex justify-between bg-gradient-to-br from-[#014470] to-[#007ad9] text-white z-50">
         <p className="font-bold text-center p-4 text-[0.3rem] lg:text-xs">
           © 2025 V&M de Honduras, todos los derechos reservados.
         </p>

@@ -5,6 +5,8 @@ const {
   readCertificadoId,
   createCertificado,
   allCertificado,
+  deleteCertificado,
+  updateCertificado
 } = require("../Controller/certificado.controller");
 
 const router = express.Router();
@@ -15,5 +17,7 @@ router.get("/", allCertificado);
 router.get("/", readCertificado);
 
 router.post("/", isAuthenticated, createCertificado);
+router.delete("/:id", deleteCertificado);
+router.put("/:id", updateCertificado);
 
 module.exports = router;

@@ -79,37 +79,69 @@ const createCertificado = async (req, res) => {
     res.status(500).json({ error: "Error del servidor" });
   }
 };
-/*
-const updateUser = (req, res) => {
-  const {id}= req.params
-  const {nombre,apellido,edad}=req.body;
 
-  const updateQuery = "UPDATE  Usuario SET nombre=?, apellido=?, edad=? WHERE id=?;";
-  const query = mysql2.format(updateQuery,[nombre,apellido,edad,id])
-
-  database.query(query,(err,result)=>{
-    if (err) throw err;
-    console.log(result)
-    res.json({message: "Usuario Actualizado"});
-  })
+const deleteCertificado = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const [result] = await database.query(
+      "DELETE FROM Certificado WHERE id=?",
+      [id]
+    );
+    if (result.affectedRows > 0) {
+      res.json({ message: "Certificado eliminado" });
+    } else {
+      res.status(404).json({ message: "Certificado no encontrado" });
+    }
+  } catch (error) {
+    console.error("Error en deleteCertificado:", error);
+    res.status(500).json({ error: "Error del servidor" });
+  }
 };
 
-const deleteUser = (req, res) => {
-  const {id}= req.params;
+const updateCertificado = async (req, res) => {
+  const { id } = req.params;
+  const {
+    nombreCompleto,
+    identidad,
+    empresa,
+    tipoCertificado,
+    instructor,
+    fechaCertificacion,
+  } = req.body;
 
-  const deleteQuery= "DELETE FROM Usuario WHERE id=? ; ";
-  const query = mysql2.format(deleteQuery,[id])
-  database.query(query,(err,result)=>{
-    if (err)throw err;
-    res.json({ message: "Usuario Eliminado" })
-  })
-}*/
+  try {
+    const [result] = await database.query(
+      `UPDATE Certificado 
+       SET nombreCompleto=?, identidad=?, empresa=?, tipoCertificado=?, instructor=?, fechaCertificacion=?
+       WHERE id=?`,
+      [
+        nombreCompleto,
+        identidad,
+        empresa,
+        tipoCertificado,
+        instructor,
+        fechaCertificacion,
+        id,
+      ]
+    );
+    if (result.affectedRows > 0) {
+      res.json({ message: "Certificado actualizado" });
+    } else {
+      res.status(404).json({ message: "Certificado no encontrado" });
+    }
+  } catch (error) {
+    console.error("Error en updateCertificado:", error);
+    res.status(500).json({ error: "Error del servidor" });
+  }
+};
 
 module.exports = {
   readCertificado,
   readCertificadoId,
   createCertificado,
   allCertificado,
+  deleteCertificado,
+  updateCertificado,
   /*
   updateUser,
   deleteUser,*/
