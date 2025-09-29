@@ -11,7 +11,7 @@ export const CertificadosPage = () => {
     empresa: '',
     tipoCertificado: ''
   });
-
+ 
   useEffect(() => {
     axios.get("http://localhost:4000/certificado")
       .then((res) => setCertificados(res.data.message))
