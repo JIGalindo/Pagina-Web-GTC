@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 export const CertificadosPage = () => {
   const [certificados, setCertificados] = useState([]);
+  console.log(certificados[60]);
   const [editando, setEditando] = useState(null); // Certificado a editar
   const [form, setForm] = useState({
     nombreCompleto: '',
@@ -11,7 +12,15 @@ export const CertificadosPage = () => {
     empresa: '',
     tipoCertificado: ''
   });
- 
+  const [nuevoOpen, setNuevoOpen] = useState(false); // Modal de nuevo
+  const [nuevoForm, setNuevoForm] = useState({
+    nombreCompleto: '',
+    identidad: '',
+    empresa: '',
+    tipoCertificado: '',
+    instructor: '',
+  });
+
   useEffect(() => {
     axios.get("http://localhost:4000/certificado")
       .then((res) => setCertificados(res.data.message))
@@ -57,6 +66,31 @@ export const CertificadosPage = () => {
     }
   };
 
+  // Abrir modal de nuevo
+  const handleNuevoOpen = () => {
+    setNuevoForm({
+      nombreCompleto: '',
+      identidad: '',
+      empresa: '',
+      tipoCertificado: '',
+      instructor: '',
+    });
+    setNuevoOpen(true);
+  };
+
+  // Guardar nuevo certificado
+  const handleCrear = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:4000/certificado", nuevoForm);
+      setCertificados([...certificados, res.data.certificado || nuevoForm]);
+      setNuevoOpen(false);
+    } catch (error) {
+      alert("Error al crear el certificado");
+      console.error(error);
+    }
+  };
+
   return (
     <>
       <div className="container p-4 flex flex-col items-center">
@@ -66,6 +100,7 @@ export const CertificadosPage = () => {
           </h1>
           <button
             className="bg-sky-600 hover:bg-sky-700 text-xs text-white font-semibold py-2 px-4 rounded shadow transition-colors duration-200"
+            onClick={handleNuevoOpen}
           >
             + Nuevo
           </button>
@@ -87,7 +122,9 @@ export const CertificadosPage = () => {
                 </tr>
               </thead>
               <tbody className="bg-grey-light">
-                {certificados.map((c) => (
+                
+
+                {certificados.toReversed().map((c) => (
                   <tr key={c.id} className="hover:bg-sky-50 transition-colors">
                     <td className="p-2 md:p-4">{c.id}</td>
                     <td className="p-2 md:p-4">{c.nombreCompleto}</td>
@@ -125,7 +162,7 @@ export const CertificadosPage = () => {
 
         {/* Modal de edición */}
         {editando && (
-          <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+          <div className="fixed inset-0 bg-gray-200 bg-opacity-40 flex items-center justify-center z-50">
             <form
               onSubmit={handleActualizar}
               className="bg-white p-6 rounded shadow-lg w-full max-w-md"
@@ -167,6 +204,65 @@ export const CertificadosPage = () => {
                 <button
                   type="button"
                   onClick={() => setEditando(null)}
+                  className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-1 px-4 rounded"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  className="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-1 px-4 rounded"
+                >
+                  Guardar
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
+
+        {/* Modal de nuevo */}
+        {nuevoOpen && (
+          <div className="fixed inset-0 bg-gray-200 bg-opacity-40 flex items-center justify-center z-50">
+            <form
+              onSubmit={handleCrear}
+              className="bg-white p-6 rounded shadow-lg w-full max-w-md"
+            >
+              <h2 className="text-lg font-bold mb-4">Nuevo Certificado</h2>
+              <label className="block mb-2 text-sm font-medium">Nombre Completo
+                <input
+                  className="w-full border rounded px-2 py-1"
+                  value={nuevoForm.nombreCompleto}
+                  onChange={e => setNuevoForm({ ...nuevoForm, nombreCompleto: e.target.value })}
+                  required
+                />
+              </label>
+              <label className="block mb-2 text-sm font-medium">Identidad
+                <input
+                  className="w-full border rounded px-2 py-1"
+                  value={nuevoForm.identidad}
+                  onChange={e => setNuevoForm({ ...nuevoForm, identidad: e.target.value })}
+                  required
+                />
+              </label>
+              <label className="block mb-2 text-sm font-medium">Empresa
+                <input
+                  className="w-full border rounded px-2 py-1"
+                  value={nuevoForm.empresa}
+                  onChange={e => setNuevoForm({ ...nuevoForm, empresa: e.target.value })}
+                  required
+                />
+              </label>
+              <label className="block mb-4 text-sm font-medium">Tipo Certificado
+                <input
+                  className="w-full border rounded px-2 py-1"
+                  value={nuevoForm.tipoCertificado}
+                  onChange={e => setNuevoForm({ ...nuevoForm, tipoCertificado: e.target.value })}
+                  required
+                />
+              </label>
+              <div className="flex justify-end space-x-2">
+                <button
+                  type="button"
+                  onClick={() => setNuevoOpen(false)}
                   className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-1 px-4 rounded"
                 >
                   Cancelar

@@ -52,18 +52,20 @@ const readCertificado = async (req, res) => {
 };
 
 const createCertificado = async (req, res) => {
+  var fecha = new Date();
   const {
     nombreCompleto,
     identidad,
     empresa,
     tipoCertificado,
     instructor,
-    fechaCertificacion,
+    fechaCertificacion = fecha.toISOString().split('T')[0],
+    fechaExpiracion = new Date(fecha.setFullYear(fecha.getFullYear() + 1)).toISOString().split('T')[0],
   } = req.body;
 
   try {
     await database.query(
-      "INSERT INTO Certificado(nombreCompleto, identidad, empresa, tipoCertificado, instructor, fechaCertificacion) VALUES (?, ?, ?, ?, ?, ?)",
+      "INSERT INTO Certificado(nombreCompleto, identidad, empresa, tipoCertificado, instructor, fechaCertificacion,fechaExpiracion) VALUES (?,?, ?, ?, ?, ?, ?)",
       [
         nombreCompleto,
         identidad,
@@ -71,6 +73,7 @@ const createCertificado = async (req, res) => {
         tipoCertificado,
         instructor,
         fechaCertificacion,
+        fechaExpiracion,
       ]
     );
     res.json({ message: "Certificado creado" });

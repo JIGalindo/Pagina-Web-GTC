@@ -15,8 +15,9 @@ router.get("/:id", readCertificadoId);
 router.get("/", allCertificado);
 
 router.get("/", readCertificado);
+router.post("/",createCertificado);
 
-router.post("/", isAuthenticated, createCertificado);
+//router.post("/", isAuthenticated, createCertificado);
 router.delete("/:id", deleteCertificado);
 router.put("/:id", updateCertificado);
 

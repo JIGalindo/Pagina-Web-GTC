@@ -10,28 +10,13 @@ export const TableroPage = () => {
     let contadorEmpresa = 0;
 
     const variantesEspaciosConfinados = [
-        'Espacios Confinados',
-        'Trabajo en Espacios Confinados',
-        'Persona Autorizada para Trabajos en Espacios Confinados',
         'Persona Autorizada Para Trabajos en Espacios Confinados',
-        'Persona Competente para Trabajos en Espacios Confinados',
         'Persona Competente Para Trabajos en Espacios Confinados',
-        'Persona competente para trabajos en espacios confinados.',
     ];
 
     const variantesAlturas = [
-        'Trabajos en Altura',
-        'Persona Competente para Trabajos en Altura',
-        'Persona Competente para Trabajos en Alturas',
+        'Persona Autorizada Para Trabajos en Alturas',
         'Persona Competente Para Trabajos en Alturas',
-        'Persona Competente para Trabajos Alturas',
-        'Persona Autorizada para Trabajos en Altura',
-        'Persona Autorizada para Trabajos en Alturas',
-        'Persona Autorizada Para Trabajos en Alturas',
-        'Persona Autorizada Para Trabajos en Altura',
-        'Persona Autorizada para Trabajos en Alturas',
-        'Persona Autorizada Para Trabajos en Alturas',
-        'Persona Autorizada Para Trabajos en Alturas',
     ];
 
     certificados.forEach(element => {
@@ -60,7 +45,7 @@ export const TableroPage = () => {
                 <h1 className='text-lg font-semibold'>Tablero</h1>
                 <hr className="w-full mb-4 border-gray-400" />
                 {/* Riva Dashboard - Tailwind CSS */}
-                <div classNameName=''>
+                <div className=''>
                     <div className="flex flex-wrap mb-2">
                         <div className="w-full md:w-1/2 xl:w-1/3 pt-3 px-3 md:pr-2">
                             <div className="bg-green-600  rounded shadow p-2">
