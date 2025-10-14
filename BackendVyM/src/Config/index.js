@@ -7,7 +7,7 @@ const main = async () => {
     await database.query("SELECT 1");
     console.log("Base de datos conectada correctamente");
 
-    app.listen(4000, () => {
+    app.listen(database.port||4000, () => {
       console.log("Servidor corriendo en el puerto 4000");
     });
   } catch (err) {

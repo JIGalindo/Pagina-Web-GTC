@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 
 export const CertificadosPage = () => {
   const [certificados, setCertificados] = useState([]);
-  console.log(certificados[60]);
   const [editando, setEditando] = useState(null); // Certificado a editar
   const [form, setForm] = useState({
     nombreCompleto: '',
@@ -93,7 +92,7 @@ export const CertificadosPage = () => {
 
   return (
     <>
-      <div className="container p-4 flex flex-col items-center">
+      <div className="pb-20 container p-4 flex flex-col items-center">
         <div className="w-full flex justify-between items-center mb-4">
           <h1 className="text-lg font-semibold">
             Personas Certificadas

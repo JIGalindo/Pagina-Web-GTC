@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from 'axios';
 import React from 'react'
+import { Footer } from '../components/Footer/Footer'
 
 export const TableroPage = () => {
     const [certificados, setCertificados] = useState([]);
@@ -41,7 +42,7 @@ export const TableroPage = () => {
         }, []);
 
         return (
-            <div className="container p-4 flex flex-col items-center">
+            <div className="pb-20 container p-4 flex flex-col items-center">
                 <h1 className='text-lg font-semibold'>Tablero</h1>
                 <hr className="w-full mb-4 border-gray-400" />
                 {/* Riva Dashboard - Tailwind CSS */}
@@ -115,6 +116,7 @@ export const TableroPage = () => {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
 
         );
