@@ -2,11 +2,11 @@
   "name": "backendvym",
   "version": "1.0.0",
   "description": "Logica de lado del servidor para la pagina web de V&M de Honduras",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon src/Config/index.js",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node src/Config/index.js"
+    "start":"node server.js"
   },
   "author": "Jose Galindo",
   "license": "ISC",
